@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      .userInput {
-        /* Default settings */
-        color: black;
-        border-color: black;
-        border-width: 5px;
-        border-style: solid;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="practice2.css" />
   </head>
   <body>
-    <p>RGB values:</p>
-    <input type="text" id="RGB1" value="" />
-    <input type="text" id="RGB2" value="" />
-    <input type="text" id="RGB3" value="" />
+    <p>Text RGB values:</p>
+    <input type="text" id="RGB1t" value="" />
+    <input type="text" id="RGB2t" value="" />
+    <input type="text" id="RGB3t" value="" />
+    <p>Border RGB values:</p>
+    <input type="text" id="RGB1b" value="" />
+    <input type="text" id="RGB2b" value="" />
+    <input type="text" id="RGB3b" value="" />
     <p>Border Width:</p>
     <input type="text" id="widthInput" value="" />
 
@@ -35,13 +31,17 @@
 
     <script>
       function myFunc() {
-        const RGB1 = document.getElementById("RGB1").value;
-        const RGB2 = document.getElementById("RGB2").value;
-        const RGB3 = document.getElementById("RGB3").value;
+        const RGB1t = document.getElementById("RGB1t").value;
+        const RGB2t = document.getElementById("RGB2t").value;
+        const RGB3t = document.getElementById("RGB3t").value;
+        const RGB1b = document.getElementById("RGB1b").value;
+        const RGB2b = document.getElementById("RGB2b").value;
+        const RGB3b = document.getElementById("RGB3b").value;
         const widthInput = document.getElementById("widthInput").value;
+        const userInput = document.getElementById("userInput");
 
-        userInput.style.color = `rgb(${RGB1}, ${RGB2}, ${RGB3})`;
-        userInput.style.borderColor = `rgb(${RGB1}, ${RGB2}, ${RGB3})`;
+        userInput.style.color = `rgb(${RGB1t}, ${RGB2t}, ${RGB3t})`;
+        userInput.style.borderColor = `rgb(${RGB1b}, ${RGB2b}, ${RGB3b})`;
         userInput.style.borderWidth = `${widthInput}px`;
       }
     </script>
