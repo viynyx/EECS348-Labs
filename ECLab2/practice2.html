@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="practice2.css" />
+  </head>
+  <body>
+    <p>Text RGB values:</p>
+    <input type="text" id="RGB1t" value="" />
+    <input type="text" id="RGB2t" value="" />
+    <input type="text" id="RGB3t" value="" />
+    <p>Border RGB values:</p>
+    <input type="text" id="RGB1b" value="" />
+    <input type="text" id="RGB2b" value="" />
+    <input type="text" id="RGB3b" value="" />
+    <p>Border Width:</p>
+    <input type="text" id="widthInput" value="" />
+
+    <button type="button" onclick="myFunc()">Click to apply</button>
+
+    <p id="userInput" class="userInput">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Commodo viverra
+      maecenas accumsan lacus vel. Proin sagittis nisl rhoncus mattis rhoncus
+      urna neque. Imperdiet sed euismod nisi porta lorem. Natoque penatibus et
+      magnis dis parturient. Aliquam malesuada bibendum arcu vitae elementum.
+      Massa tempor nec feugiat nisl pretium fusce. Lectus nulla at volutpat
+      diam. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla.
+      Consequat mauris nunc congue nisi vitae suscipit tellus mauris a. Enim ut
+      tellus elementum sagittis vitae. Ullamcorper a lacus vestibulum sed.
+    </p>
+
+    <script>
+      function myFunc() {
+        const RGB1t = document.getElementById("RGB1t").value;
+        const RGB2t = document.getElementById("RGB2t").value;
+        const RGB3t = document.getElementById("RGB3t").value;
+        const RGB1b = document.getElementById("RGB1b").value;
+        const RGB2b = document.getElementById("RGB2b").value;
+        const RGB3b = document.getElementById("RGB3b").value;
+        const widthInput = document.getElementById("widthInput").value;
+        const userInput = document.getElementById("userInput");
+
+        userInput.style.color = `rgb(${RGB1t}, ${RGB2t}, ${RGB3t})`;
+        userInput.style.borderColor = `rgb(${RGB1b}, ${RGB2b}, ${RGB3b})`;
+        userInput.style.borderWidth = `${widthInput}px`;
+      }
+    </script>
+  </body>
+</html>
